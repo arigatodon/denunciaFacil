@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Denuncia Facil</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -11,14 +12,17 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
-  <section class="hero is-info">
-    <div class="hero-body">
-      <h1 class="title">
+  <section class="hero is-info is-fullheight"">
+    <div class="hero-body ">
+      <div>
+      <h1 class="title is-1">
         Denuncia facil
       </h1>
+      <br>
       <p class="subtitle">
       </p>
-      <select name="denuncias" id="denuncias"  onchange="search_manager()"></select>
+      <select name="denuncias" id="denuncias" class="select is-success" onchange="search_manager()" style="width: 90%; height: 40px;"></select>
+      </div>
     </div>
   </section>
 
