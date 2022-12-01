@@ -6,19 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denuncia Facil</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
-    <section class="hero is-info">
-      <div class="hero-body">
-        <p class="title">
-          Denuncia facil
-        </p>
-        <p class="subtitle">
-          encuentra una lista con la denuncia que sea mas cercana a tu necesidad nosotros te deribaremos a la plataforma indicada
-        </p>
-        <select name="denuncias" id="denuncias"></select>
-      </div>
-    </section>
+  <section class="hero is-info">
+    <div class="hero-body">
+      <h1 class="title">
+        Denuncia facil
+      </h1>
+      <p class="subtitle">
+      </p>
+      <select name="denuncias" id="denuncias"  onchange="search_manager()"></select>
+    </div>
+  </section>
+
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Modal title</p>
+        <button class="delete" aria-label="close" onclick="close_modal()"></button>
+      </header>
+      <section class="modal-card-body">
+        <table class="table">
+          <tbody>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
 </body>
 <script src="script.js"></script>
 </html>

@@ -109,3 +109,24 @@ data.forEach((element) => {
         sel.add(opt, null);
     });
 });
+$(sel).select2();
+
+function search_manager(obj){
+    manager = data.find(x => x.nombre === sel.value);
+    $('.modal-card-title').html(manager.nombre);
+    $('.modal').addClass('is-active');
+    $('.table tbody').html("");
+    if(manager.web != ''){
+        $('.table tbody').append("<tr><th><a href='"+manager.web+"' target='_blank'>"+manager.web+"</a></th></tr>")
+    }
+    if(manager.num != ''){
+        $('.table tbody').append("<tr><th>"+manager.num+"</th></tr>")
+    }
+    if(manager.web != ''){
+        $('.table tbody').append("<tr><th>"+manager.correo+"</th></tr>")
+    }
+    console.log(manager)
+}
+function close_modal(){
+    $('.modal').removeClass('is-active');
+}
